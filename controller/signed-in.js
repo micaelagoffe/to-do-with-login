@@ -49,12 +49,18 @@ const editTodoRender = async (req, res) => {
     const todo = await ToDo.findOne({ _id: req.params.id });
   
     res.render("edit.ejs", { todo: todo });
-  };
+};
   
 const editTodoSubmit = async (req, res) => {
 await ToDo.updateOne({ _id: req.body.id }, { name: req.body.name });
 
 res.redirect("/todos");
+};
+
+const deleteTodo = async (req, res) => {
+    await ToDo.deleteOne({ _id: req.params.id });
+  
+    res.redirect("/todos");
 };
 
 
@@ -63,5 +69,6 @@ module.exports = {
   paginationRender,
   addTodoSubmit,
   editTodoRender,
-  editTodoSubmit
+  editTodoSubmit,
+  deleteTodo
 };
