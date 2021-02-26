@@ -63,6 +63,10 @@ const deleteTodo = async (req, res) => {
     res.redirect("/todos");
 };
 
+const signout = (req, res) => {
+    res.clearCookie('jwtToken').render("signedout.ejs");
+};
+
 
 module.exports = {
   signedinRender,
@@ -70,5 +74,6 @@ module.exports = {
   addTodoSubmit,
   editTodoRender,
   editTodoSubmit,
-  deleteTodo
+  deleteTodo,
+  signout
 };
