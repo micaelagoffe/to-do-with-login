@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO-LIST &#10003;</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/edit.css" type="text/css" />
+  </head>
+  <body>
+    <div class="header">TO-DO-LIST</div>
+    <div class="inputContainer">
+      <form action="/todos" method="POST" class="todo-header">
+        <input type="text" name="content" placeholder="Write something..."/>
+        <button type="submit"><i class="addIcon fas fa-plus"></i></button>
+      </form>
+    </div>
+    <div class="todoContainer">
+        <ul class="todoList">
+            <form action="/edit" method="post">
+                <input type="text" name="name" id="" value="<%= todo.name %>">
+                <input type="text" name="id" value="<%= todo._id %>" hidden>
+                <button type="submit"><i class="updateIcon fas fa-check"></i></button>
+            </form>
+        </ul>
+    </div>
+    <div class="signoutContainer">
+        <a href="/signout">Sign out</a>
+    </div>
+  </body>
+</html>
