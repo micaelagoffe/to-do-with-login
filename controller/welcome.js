@@ -1,7 +1,7 @@
 const welcomeRender = (req, res) => {
-    res.render("welcome.ejs");
+  res.render("welcome.ejs");
 };
 
 module.exports = {
-    welcomeRender
+  welcomeRender,
 };

@@ -20,12 +20,11 @@ const signupSubmit = async (req, res) => {
 
     return res.redirect("/signin");
   } catch (err) {
-    if (err) return res.render("signup.ejs", { err: err });
-    //!Hantera error (om det ej går att registrera användare) i signup.ejs
+    console.log(err);
   }
 };
 
 module.exports = {
   signupRender,
-  signupSubmit
+  signupSubmit,
 };

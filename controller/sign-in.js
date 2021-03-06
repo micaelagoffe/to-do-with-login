@@ -9,28 +9,32 @@ const signinRender = (req, res) => {
 const signinSubmit = async (req, res) => {
   const { email, password } = req.body;
 
-  const user = await User.findOne({ email: email });
-  if (!user) return res.redirect("/singup");
+  try {
+    const user = await User.findOne({ email: email });
+    if (!user) return res.redirect("/singup");
 
-  const validPW = await bcrypt.compare(password, user.password);
-  if (!validPW) return res.redirect("/signin");
+    const validPW = await bcrypt.compare(password, user.password);
+    if (!validPW) return res.redirect("/signin");
 
-  const jwtToken = jwt.sign({ username: user }, process.env.SECRET);
+    const jwtToken = jwt.sign({ username: user }, process.env.SECRET);
 
-  if (jwtToken) {
-    const cookie = req.cookies.jwtToken;
+    if (jwtToken) {
+      const cookie = req.cookies.jwtToken;
 
-    if (!cookie) {
-      res.cookie("jwtToken", jwtToken, { maxAge: 7200000, httpOnly: true });
+      if (!cookie) {
+        res.cookie("jwtToken", jwtToken, { maxAge: 7200000, httpOnly: true });
+      }
+
+      return res.redirect("/todos");
     }
 
-    return res.redirect("/todos");
+    return res.redirect("/signin");
+  } catch (err) {
+    console.log(err);
   }
-
-  return res.redirect("/signin");
 };
 
 module.exports = {
   signinRender,
-  signinSubmit
+  signinSubmit,
 };
