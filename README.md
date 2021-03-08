@@ -8,13 +8,13 @@
 - Run `git clone https://github.com/micaelagoffe/to-do-app.git`
 - Run `npm i`
 - Create .env-file with: 
-	- DB_URL = <your database query string>
-	- PORT = <server port number>
-	- SECRET = <a secret key>
-	- MAIL_HOST = "<your mail host>"
-	- MAIL_PORT = <port number for mail host>
-	- MAIL_USER = "<your email address>"
-	- MAIL_PW = "<your email password>"
+	- DB_URL = < your database query string >
+	- PORT = < server port number >
+	- SECRET = < a secret key >
+	- MAIL_HOST = "< your mail host >"
+	- MAIL_PORT = < port number for mail host >
+	- MAIL_USER = "< your email address >"
+	- MAIL_PW = "< your email password >"
 - Run `npm start`
 - Run `npm run css` for compiling scss to css
 - Go to localhost:*PORT* in your browser
