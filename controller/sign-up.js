@@ -18,6 +18,8 @@ const signupSubmit = async (req, res) => {
     const savedEmail = await User.findOne({ email: email });
     if (savedEmail) return res.render("signup.ejs", {err: "User already exists"});
 
+    if (!username || !email) return res.render("signup.ejs", {err: "Fields can't be empty"});
+
     await new User({
       username: username,
       email: email,

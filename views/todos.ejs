@@ -38,11 +38,13 @@
     <div class="pagContainer">
       <% if (totalPages > 0) { %>
       <ul class="pagination">
-        <% for (let i = 1; i <= totalPages; i++) { %> <% if (i == currentPage) { %>
+        <% for (let i = 1; i <= totalPages; i++) { %> 
+          <% if (i == currentPage) { %>
         <li class="active"><a><%= i %></a></li>
         <% } else { %>
         <li class="pageBtn"><a href="/<%= i %>"><%= i %></a></li>
-        <% } %> <% } %>
+        <% } %> 
+        <% } %>
       </ul>
       <% } %>
     </div>
