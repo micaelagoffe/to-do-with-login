@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const bodyparser = require('body-parser');
 const cookieparser = require("cookie-parser");
 
 const userRoute = require("./routes/user-route");
@@ -13,9 +12,8 @@ dotenv.config();
 
 app.use(express.static(__dirname + "/public"));
 
-app.use(bodyparser.urlencoded({extended: false})); //Deprecated, använd under istället?
-// app.use(express.urlencoded({extended: false}));
-// app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 app.use(cookieparser());
 

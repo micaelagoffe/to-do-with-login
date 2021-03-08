@@ -14,7 +14,7 @@ html, body {
   html .header, body .header {
     font-family: 'Oswald', sans-serif;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 50px;
     font-size: 3.9em;
     font-weight: bold; }
     @media screen and (min-width: 768px) {
@@ -70,14 +70,14 @@ html, body {
       background-color: rgba(51, 51, 51, 0.445);
       box-shadow: 0 0 10px #363636;
       padding: 15px 15px;
-      width: 85%; }
+      width: 70%; }
       @media screen and (min-width: 768px) {
         html .todoContainer .todoList, body .todoContainer .todoList {
-          width: 65%;
+          width: 50%;
           padding: 15px 35px; } }
       @media screen and (min-width: 1024px) {
         html .todoContainer .todoList, body .todoContainer .todoList {
-          width: 55%; } }
+          width: 40%; } }
       html .todoContainer .todoList form, body .todoContainer .todoList form {
         display: flex;
         justify-content: space-between;
@@ -88,6 +88,9 @@ html, body {
           font-size: 1em;
           border: none;
           border-radius: 5px; }
+          @media screen and (min-width: 786px) {
+            html .todoContainer .todoList form input, body .todoContainer .todoList form input {
+              font-size: 1.3em; } }
         html .todoContainer .todoList form button, body .todoContainer .todoList form button {
           color: #f0f0f0;
           font-size: 1em;

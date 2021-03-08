@@ -3,11 +3,10 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-
 const verifiedToken = (req, res, next) => {
-  const token = req.cookies.jwtToken;
+  const token = req.cookies.jwToken;
 
-  if (!token) return res.render("signin.ejs");
+  if (!token) return res.render("signin.ejs", {err: "Access denied, sign in!"});
 
   const validUser = jwt.verify(token, process.env.SECRET);
 

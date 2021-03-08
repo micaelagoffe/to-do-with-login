@@ -16,7 +16,7 @@ const transport = nodemailer.createTransport({
 });
 
 const resetRender = (req, res) => {
-  res.render("reset.ejs");
+  res.render("reset.ejs", {err: ""});
 };
 
 const sendResetSubmit = async (req, res) => {
@@ -25,7 +25,7 @@ const sendResetSubmit = async (req, res) => {
   try {
     const user = await User.findOne({ email: email });
 
-    if (!user) return res.redirect("/signup");
+    if (!user) return res.render("reset.ejs", {err: "User not found"});
 
     const token = await crypto.randomBytes(32).toString("hex");
 

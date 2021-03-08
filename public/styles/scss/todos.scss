@@ -16,7 +16,7 @@ html, body {
     .header {
         font-family: 'Oswald', sans-serif;
         text-align: center;
-        margin-top: 40px;
+        margin-top: 50px;
         font-size: 3.9em;
         font-weight: bold;
         @media screen and (min-width: 768px) {
@@ -74,7 +74,7 @@ html, body {
     }
 
     .sortContainer {
-        width: 80%;
+        width: 67%;
         display: flex;
         justify-content: space-between;
         margin-top: 55px;
@@ -82,11 +82,10 @@ html, body {
         color: grey;
         font-size: 0.7em;
         @media screen and (min-width: 768px) {
-            width: 62%;
-            margin-top: 80px;
+            width: 47%;
         }
         @media screen and (min-width: 1024px) {
-            width: 52%;
+            width: 37%;
             margin-top: 50px;
         }
 
@@ -114,13 +113,13 @@ html, body {
             background-color: rgba(51, 51, 51, 0.445);
             box-shadow: 0 0 10px rgb(54, 54, 54);
             padding: 15px 15px;
-            width: 85%;
+            width: 70%;
             @media screen and (min-width: 768px) {
-                width: 65%;
+                width: 50%;
                 padding: 15px 35px;
             }
             @media screen and (min-width: 1024px) {
-                width: 55%;
+                width: 40%;
             }
 
             .todoItem {

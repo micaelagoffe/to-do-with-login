@@ -14,6 +14,9 @@
     <div class="header">TO-DO-LIST</div>
     <div class="resetContainer">
         Reset password
+        <% if (err) { %>
+            <p class="error"><%= err %></p>
+        <% } %>
         <form action="/reset" method="post">
             <input type="email" name="email" placeholder="Your e-mail">
             <button type="submit">Send</button>

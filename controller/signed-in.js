@@ -97,7 +97,7 @@ const deleteTodo = async (req, res) => {
 
 const signout = (req, res) => {
   try {
-    res.clearCookie("jwtToken").render("signedout.ejs");
+    res.clearCookie("jwToken").render("signedout.ejs");
   } catch (err) {
     console.log(err);
   }

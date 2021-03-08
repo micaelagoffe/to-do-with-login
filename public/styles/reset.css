@@ -14,7 +14,7 @@ html, body {
   html .header, body .header {
     font-family: 'Oswald', sans-serif;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 50px;
     font-size: 3.9em;
     font-weight: bold; }
     @media screen and (min-width: 768px) {
@@ -34,12 +34,25 @@ html, body {
     padding: 30px 0;
     font-size: 1.4em;
     text-transform: uppercase; }
+    @media screen and (min-width: 768px) {
+      html .resetContainer, body .resetContainer {
+        width: 50%; } }
+    @media screen and (min-width: 1200px) {
+      html .resetContainer, body .resetContainer {
+        width: 40%; } }
+    html .resetContainer .error, body .resetContainer .error {
+      background-color: #eba8a8;
+      color: black;
+      font-size: 0.8rem;
+      margin-top: 20px;
+      padding: 5px 10px;
+      border-radius: 10px; }
     html .resetContainer form, body .resetContainer form {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
-      margin-top: 20px; }
+      margin-top: 5px; }
       html .resetContainer form input, body .resetContainer form input {
         width: 80%;
         margin: 5px 0;
