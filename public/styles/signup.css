@@ -22,7 +22,7 @@ html, body {
         margin-top: 5px;
         font-size: 4em;
         padding-right: 10px; } }
-  html .loginContainer, body .loginContainer {
+  html .signupContainer, body .signupContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,49 +35,49 @@ html, body {
     font-size: 1.4em;
     text-transform: uppercase; }
     @media screen and (min-width: 768px) {
-      html .loginContainer, body .loginContainer {
+      html .signupContainer, body .signupContainer {
         width: 50%; } }
     @media screen and (min-width: 1200px) {
-      html .loginContainer, body .loginContainer {
+      html .signupContainer, body .signupContainer {
         width: 40%; } }
-    html .loginContainer .error, body .loginContainer .error {
+    html .signupContainer .error, body .signupContainer .error {
       background-color: #eba8a8;
       color: black;
       font-size: 0.8rem;
       margin-top: 20px;
       padding: 5px 10px;
       border-radius: 10px; }
-    html .loginContainer form, body .loginContainer form {
+    html .signupContainer form, body .signupContainer form {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
       margin-top: 5px; }
-      html .loginContainer form input, body .loginContainer form input {
+      html .signupContainer form input, body .signupContainer form input {
         width: 80%;
         margin: 5px 0;
         padding: 7px 5px;
         border: none;
         border-radius: 5px;
         background-color: #f0f0f0; }
-      html .loginContainer form button, body .loginContainer form button {
-        margin: 15px 0 25px 0;
+      html .signupContainer form button, body .signupContainer form button {
+        margin: 15px 0 5px 0;
         background-color: #f0f0f0;
         border: none;
         border-radius: 5px;
         font-size: 1em;
         padding: 2px 10px;
         cursor: pointer; }
-        html .loginContainer form button:hover, body .loginContainer form button:hover {
+        html .signupContainer form button:hover, body .signupContainer form button:hover {
           background-color: rgba(82, 82, 82, 0.445); }
-  html .registerContainer, body .registerContainer {
+  html .toLoginContainer, body .toLoginContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px; }
-    html .registerContainer a, body .registerContainer a {
+    html .toLoginContainer a, body .toLoginContainer a {
       color: #3a3a3a;
       font-size: 1em;
       text-decoration: none; }
-      html .registerContainer a:hover, body .registerContainer a:hover {
+      html .toLoginContainer a:hover, body .toLoginContainer a:hover {
         color: #f0f0f0; }

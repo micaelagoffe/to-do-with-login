@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO-LIST &#10003;</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/styles/todos.css" type="text/css" />
+  </head>
+  <body>
+    <div class="header">TO-DO-LIST</div>
+    <div class="inputContainer">
+      <form action="/todos" method="POST" class="todo-header">
+        <input type="text" name="content" placeholder="Add a task, <%= user %>!" />
+        <button type="submit"><i class="addIcon fas fa-plus"></i></button>
+      </form>
+    </div>
+    <div class="sortContainer">
+      <a href="?sortDate=-1" class="sort">Most recent</a>
+      <a href="?sortAZ=1" class="sort">Alphabetical</a>
+    </div>
+    <div class="todoContainer">
+      <ul class="todoList">
+        <% for (let i = 0; i < data.length; i++) { %>
+        <li class="todoItem">
+          <p><%= data[i].name %></p>
+          <div class="icons">
+            <a href="/edit/<%= data[i]._id %>"><i class="edIcon fas fa-edit"></i></a>
+            <a href="/delete/<%= data[i]._id %>"><i class="remIcon fas fa-times"></i></a>
+          </div>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+    <div class="pagContainer">
+      <% if (totalPages > 0) { %>
+      <ul class="pagination">
+        <% for (let i = 1; i <= totalPages; i++) { %> 
+          <% if (i == currentPage) { %>
+        <li class="active"><a><%= i %></a></li>
+        <% } else { %>
+        <li class="pageBtn"><a href="/<%= i %>"><%= i %></a></li>
+        <% } %> 
+        <% } %>
+      </ul>
+      <% } %>
+    </div>
+    <div class="signoutContainer">
+        <a href="/signedout">Sign out</a>
+    </div>
+  </body>
+</html>

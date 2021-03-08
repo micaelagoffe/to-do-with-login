@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #d1e2d1, #7eb17e);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  html .header, body .header {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3.9em;
+    font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      html .header, body .header {
+        margin-top: 5px;
+        font-size: 4em;
+        padding-right: 10px; } }
+  html .inputContainer, body .inputContainer {
+    margin-top: 30px; }
+    @media screen and (min-width: 1024px) {
+      html .inputContainer, body .inputContainer {
+        margin-top: 30px; } }
+    html .inputContainer form, body .inputContainer form {
+      width: 230px;
+      display: flex;
+      justify-content: space-between; }
+      @media screen and (min-width: 768px) {
+        html .inputContainer form, body .inputContainer form {
+          width: 270px; } }
+      @media screen and (min-width: 1024px) {
+        html .inputContainer form, body .inputContainer form {
+          width: 290px; } }
+      html .inputContainer form input, body .inputContainer form input {
+        width: 200px;
+        font-size: 1em;
+        border: none;
+        border-radius: 5px;
+        padding: 6px;
+        box-shadow: 0 0 5px rgba(98, 98, 98, 0.486); }
+        @media screen and (min-width: 768px) {
+          html .inputContainer form input, body .inputContainer form input {
+            width: 240px;
+            font-size: 1.1em;
+            padding: 8px; } }
+        @media screen and (min-width: 1024px) {
+          html .inputContainer form input, body .inputContainer form input {
+            width: 260px; } }
+      html .inputContainer form button, body .inputContainer form button {
+        font-size: 1.3em;
+        border: none;
+        background-color: transparent;
+        cursor: pointer; }
+        html .inputContainer form button:hover, body .inputContainer form button:hover {
+          color: lightgrey; }
+  html .todoContainer, body .todoContainer {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; }
+    html .todoContainer .todoList, body .todoContainer .todoList {
+      list-style: none;
+      background-color: rgba(51, 51, 51, 0.445);
+      box-shadow: 0 0 10px #363636;
+      padding: 15px 15px;
+      width: 70%; }
+      @media screen and (min-width: 768px) {
+        html .todoContainer .todoList, body .todoContainer .todoList {
+          width: 50%;
+          padding: 15px 35px; } }
+      @media screen and (min-width: 1024px) {
+        html .todoContainer .todoList, body .todoContainer .todoList {
+          width: 40%; } }
+      html .todoContainer .todoList form, body .todoContainer .todoList form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        html .todoContainer .todoList form input, body .todoContainer .todoList form input {
+          color: #f0f0f0;
+          background-color: transparent;
+          font-size: 1em;
+          border: none;
+          border-radius: 5px; }
+          @media screen and (min-width: 786px) {
+            html .todoContainer .todoList form input, body .todoContainer .todoList form input {
+              font-size: 1.3em; } }
+        html .todoContainer .todoList form button, body .todoContainer .todoList form button {
+          color: #f0f0f0;
+          font-size: 1em;
+          border: none;
+          background-color: transparent;
+          cursor: pointer; }
+          html .todoContainer .todoList form button:hover, body .todoContainer .todoList form button:hover {
+            color: lightgrey; }
+  html .signoutContainer, body .signoutContainer {
+    margin-top: 25px; }
+    html .signoutContainer a, body .signoutContainer a {
+      color: black;
+      background-color: rgba(255, 255, 255, 0.246);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      border-radius: 10px;
+      padding: 5px 10px; }
+      html .signoutContainer a:hover, body .signoutContainer a:hover {
+        color: white;
+        background-color: #363636; }

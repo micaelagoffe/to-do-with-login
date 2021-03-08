@@ -22,7 +22,7 @@ html, body {
         margin-top: 5px;
         font-size: 4em;
         padding-right: 10px; } }
-  html .welcomeContainer, body .welcomeContainer {
+  html .signedoutContainer, body .signedoutContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,17 +35,17 @@ html, body {
     font-size: 1.4em;
     text-transform: uppercase; }
     @media screen and (min-width: 768px) {
-      html .welcomeContainer, body .welcomeContainer {
+      html .signedoutContainer, body .signedoutContainer {
         width: 50%; } }
     @media screen and (min-width: 1200px) {
-      html .welcomeContainer, body .welcomeContainer {
+      html .signedoutContainer, body .signedoutContainer {
         width: 40%; } }
-    html .welcomeContainer p, body .welcomeContainer p {
+    html .signedoutContainer p, body .signedoutContainer p {
       margin: 5px 15px 0 15px;
       text-align: center;
       font-size: 1.1rem;
       text-transform: none; }
-    html .welcomeContainer .choiceContainer, body .welcomeContainer .choiceContainer {
+    html .signedoutContainer .signinContainer, body .signedoutContainer .signinContainer {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -53,13 +53,13 @@ html, body {
       text-align: center;
       font-size: 1.05rem;
       font-weight: bold; }
-      html .welcomeContainer .choiceContainer .links, body .welcomeContainer .choiceContainer .links {
+      html .signedoutContainer .signinContainer .link, body .signedoutContainer .signinContainer .link {
         font-weight: normal;
         margin-top: 5px; }
-        html .welcomeContainer .choiceContainer .links a, body .welcomeContainer .choiceContainer .links a {
+        html .signedoutContainer .signinContainer .link a, body .signedoutContainer .signinContainer .link a {
           margin-top: 10px;
           text-decoration: none;
           font-size: 1rem;
           color: white; }
-          html .welcomeContainer .choiceContainer .links a:hover, body .welcomeContainer .choiceContainer .links a:hover {
+          html .signedoutContainer .signinContainer .link a:hover, body .signedoutContainer .signinContainer .link a:hover {
             color: #363636; }

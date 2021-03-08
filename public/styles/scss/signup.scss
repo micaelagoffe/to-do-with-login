@@ -26,7 +26,7 @@ html, body {
         }
     }
 
-    .loginContainer {
+    .signupContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -71,7 +71,7 @@ html, body {
             }
 
             button {
-                margin: 15px 0 25px 0;
+                margin: 15px 0 5px 0;
                 background-color: rgb(240, 240, 240);
                 border: none;
                 border-radius: 5px;
@@ -86,7 +86,7 @@ html, body {
         }
     }
 
-    .registerContainer {
+    .toLoginContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
