@@ -1,5 +1,5 @@
-# To-do-app
-*School assignment to create a to-do-app with authentication using Node.js, Express, MongoDB, EJS, SCSS.*
+# To-do list
+*School assignment to create a to-do list with authentication using Node.js, Express, MongoDB, EJS, SCSS.*
 
 ---
 
