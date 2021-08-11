@@ -5,7 +5,7 @@
 
 ### Installation
 - Open terminal
-- Run `git clone https://github.com/micaelagoffe/to-do-with-login.git`
+- Run `git clone https://github.com/micaelagoffe/to-do-auth.git`
 - Run `npm i`
 - Create .env-file with: 
 	- DB_URL = <*your database query string*>
